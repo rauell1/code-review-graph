@@ -40,18 +40,22 @@ For the full feature list and changelog, see [docs/FEATURES.md](docs/FEATURES.md
 
 ## 🚀 Quick Start
 
-### Installation (one command)
+### Installation
 
 ```bash
 pip install code-review-graph
 ```
 
-That's it. Works on Python 3.10+.
-
-With semantic search (optional):
+Works on Python 3.10+. With semantic search (optional):
 
 ```bash
 pip install code-review-graph[embeddings]
+```
+
+**Don't have Python 3.10+?** Use Docker instead:
+
+```bash
+docker run -v $(pwd):/repo tirth8205/code-review-graph build
 ```
 
 ### CLI

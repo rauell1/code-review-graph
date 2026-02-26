@@ -10,9 +10,20 @@ Usage:
 
 from __future__ import annotations
 
+import sys
+
+# Python version check — must come before any other imports
+if sys.version_info < (3, 10):
+    print("code-review-graph requires Python 3.10 or higher.")
+    print(f"  You are running Python {sys.version}")
+    print()
+    print("Options:")
+    print("  1. Install Python 3.10+: https://www.python.org/downloads/")
+    print("  2. Use Docker: docker run -v $(pwd):/repo tirth8205/code-review-graph")
+    sys.exit(1)
+
 import argparse
 import logging
-import sys
 from pathlib import Path
 
 
